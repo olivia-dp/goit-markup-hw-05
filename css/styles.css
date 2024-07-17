@@ -445,3 +445,54 @@ transform: translateY(0);
 .footer-link:focus {
     background-color: #31D0AA;
 }
+.backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    background-color: rgba(46, 47, 66, 0.4);
+}
+.modal {
+    width: 408px;
+    height: 584px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background: #fcfcfc;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 72px 24px 24px 24px;
+    
+}
+.close-btn {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 24px;
+        right: 24px;
+            border-radius: 50%;
+                background-color: #e7e9fc;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                padding: 0;
+                cursor: pointer;
+                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.icon-close {
+ fill: #2e2f42;
+}
+.close-btn:hover {
+    background-color: #404BBF;
+    border: #404bbf;
+}
+.close-btn:hover .icon-close {
+    fill: #FFFFFF;
+}
+.modal-header {
+font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+}
