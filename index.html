@@ -460,6 +460,7 @@
         <div class="subscribe">
           <p class="subscribe-title">Subscribe</p>
           <div class="subscribe-forms">
+            <label for="email"></label>
             <input
               type="email"
               class="subscribe-input"
@@ -468,12 +469,9 @@
               placeholder="E-mail"
             />
             <button type="submit" class="subscribe-btn">
-              <span class="btn-label">Subscribe</span
-              ><span class="btn-icon"
-                ><svg class="subscribe-icon" width="24" height="24">
-                  <use href="./images/icons.svg#icon-Frame"></use>
-                </svg>
-              </span>
+              Subscribe<svg class="subscribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-Frame"></use>
+              </svg>
             </button>
           </div>
         </div>
@@ -545,14 +543,17 @@
           <div class="privacy-field">
             <input
               type="checkbox"
-              class="visually-hidden"
+              class="privacy-checkbox visually-hidden"
               name="privacy"
               value="agree"
               id="privacy"
             />
             <label for="privacy" class="privacy-text"
+              ><span class="privacy-check"
+                ><svg width="10" height="8">
+                  <use href="./images/icons.svg#icon-Vector"></use></svg></span
               >I accept the terms and conditions of the
-              <span class="privacy-accent">Privacy Policy</span></label
+              <a href="" class="privacy-accent">Privacy Policy</a></label
             >
           </div>
           <button type="submit" class="send-btn">Send</button>
