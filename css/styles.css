@@ -445,12 +445,78 @@ transform: translateY(0);
 .footer-link:focus {
     background-color: #31D0AA;
 }
+.subscribe {
+    margin-left: 80px;
+}
+.subscribe-title {
+    font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #fff;
+        max-width: 75px;
+        margin-bottom: 16px;
+}
+.subscribe-forms {
+    display: flex;
+}
+.subscribe-input {
+border: 1px solid #fff;
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+    outline: transparent;
+    padding: 8px 16px;
+}
+.subscribe-input::placeholder{
+font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+.subscribe-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    border-radius: 4px;
+        padding: 8px 24px;
+        border: 0;
+        width: 165px;
+        height: 40px;
+        background: #4d5ae5;
+        margin-left: 24px;
+        cursor: pointer;
+}
+.btn-label {
+font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+}
+.btn-icon {
+    display: inline-block;
+}
+.subscribe-icon {
+    fill: #fff;
+}
 .backdrop {
     width: 100%;
     height: 100%;
     position: fixed;
     top:0;
     background-color: rgba(46, 47, 66, 0.4);
+    opacity: 0;
+    pointer-events: none;
+}
+.backdrop.is-open {
+    opacity: 1;
+        pointer-events: auto;
 }
 .modal {
     width: 408px;
@@ -469,6 +535,9 @@ transform: translateY(0);
         width: 24px;
         height: 24px;
         position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         top: 24px;
         right: 24px;
             border-radius: 50%;
@@ -489,10 +558,106 @@ transform: translateY(0);
     fill: #FFFFFF;
 }
 .modal-header {
+    max-width: 360px;
 font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    margin-bottom: 16px;
+}
+.modal-field-wrap {
+    position: relative;
+}
+.modal-input {
+    width: 100%;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    height: 40px;
+    background-color: transparent;
+    padding-left: 62px;
+    padding-right: 24px;
+    color: #1e1823;
+    font-size: 18px;
+    outline: transparent;
+}
+.modal-icon {
+    fill: #2E2F42;
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.modal-input:focus {
+    border: 1px solid #4d5ae5;
+}
+
+.modal-input:focus + .modal-icon {
+  fill: #4d5ae5;
+}
+.modal-label {
+        font-size: 12px;
+        line-height: 1.16667;
+        letter-spacing: 0.04em;
+        color: #8e8f99;
+}
+.modal-comment {
+    resize: none;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    outline: transparent;
+        border-radius: 4px;
+        width: 100%;
+        height: 120px;
+        padding: 8px 16px;
+}
+.modal-comment:focus {
+    border: 1px solid #4d5ae5;
+}
+.modal-comment::placeholder {
+    font-size: 12px;
+        line-height: 1.16667;
+        letter-spacing: 0.04em;
+        color: rgba(46, 47, 66, 0.4);
+}
+.modal-textarea {
+    margin-bottom: 16px;
+}
+.send-btn {
+    display: block;
+        margin: 0 auto;
+        border: none;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+        background: #4d5ae5;
+        border-radius: 4px;
+            padding: 16px 32px;
+            width: 169px;
+            height: 56px;
+            font-weight: 500;
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: 0.04em;
+                text-align: center;
+                color: #fff;
+}
+.privacy-field {
+    height: 16px;
+    margin-bottom: 24px;
+}
+.privacy:checked {
+    border-radius: 2px;
+        fill: #404bbf;
+        border: 1px solid #404bbf;
+}
+.privacy-text {
+    font-size: 12px;
+        line-height: 1.16667;
+        letter-spacing: 0.04em;
+        color: #8e8f99;
+}
+.privacy-accent {
+    line-height: 1.33333;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #4d5ae5;
 }
