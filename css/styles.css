@@ -581,7 +581,7 @@ font-weight: 500;
     border-radius: 4px;
     height: 40px;
     background-color: transparent;
-    padding-left: 62px;
+    padding-left: 38px;
     padding-right: 24px;
     color: #1e1823;
     font-size: 18px;
@@ -657,9 +657,12 @@ font-weight: 500;
 .privacy-field {
     height: 16px;
     margin-bottom: 24px;
+    position: relative;
 }
 
 .privacy-check {
+    position: absolute;
+        left: 0;
     display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -679,14 +682,14 @@ font-weight: 500;
     display: flex;
         align-items: center;
         justify-content: center;
-        gap:8px;
+        gap: 4px;
     font-size: 12px;
         line-height: 1.16667;
         letter-spacing: 0.04em;
         color: #8e8f99;
 }
 .privacy-accent {
-    margin-left: -4px;
+
     line-height: 1.33333;
         text-decoration: underline;
         text-decoration-skip-ink: none;
