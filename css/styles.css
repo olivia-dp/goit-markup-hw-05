@@ -14,7 +14,6 @@ p {
 }
 a {
     text-decoration: none;
-    display:block;
 }
 ul {
     list-style-type: none;
@@ -701,7 +700,6 @@ font-weight: 500;
 }
 
 .privacy-accent {
-    display: block;
     margin-left: 3px;
     line-height: 1.33333;
     text-decoration: underline;
