@@ -459,8 +459,12 @@ transform: translateY(0);
 }
 .subscribe-forms {
     display: flex;
+gap: 24px;
+align-items: center;
+    justify-content: center;
 }
 .subscribe-input {
+    margin-left: -24px;
 border: 1px solid #fff;
     border-radius: 4px;
     width: 264px;
@@ -468,28 +472,27 @@ border: 1px solid #fff;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     background-color: transparent;
     outline: transparent;
-    padding: 8px 16px;
-}
-.subscribe-input::placeholder{
-font-weight: 400;
+    padding-left: 16px;
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
+    color: #ffffff;
+}
+.subscribe-input::placeholder{
     color: #fff;
 }
 .subscribe-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
     border-radius: 4px;
         padding: 8px 24px;
-        border: 0;
-        width: 165px;
+        border: none;
+        min-width: 165px;
         height: 40px;
-        background: #4d5ae5;
-        margin-left: 24px;
+        background-color: #4d5ae5;
         cursor: pointer;
+        font-family: "Roboto", sans-serif;
         font-weight: 500;
             font-size: 16px;
             line-height: 1.5;
@@ -504,6 +507,7 @@ font-weight: 400;
  }
 .subscribe-icon {
     fill: #fff;
+    margin-left: 16px;
 }
 .backdrop {
     width: 100%;
@@ -514,6 +518,7 @@ font-weight: 400;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-open {
     opacity: 1;
@@ -522,7 +527,7 @@ font-weight: 400;
 }
 .modal {
     width: 408px;
-    height: 584px;
+    min-height: 584px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background: #fcfcfc;
     border-radius: 4px;
@@ -531,6 +536,7 @@ font-weight: 400;
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 72px 24px 24px 24px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .close-btn {
@@ -551,12 +557,14 @@ font-weight: 400;
 }
 .icon-close {
  fill: #2e2f42;
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.close-btn:hover {
+.close-btn:hover, .close-btn:focus {
     background-color: #404BBF;
-    border: #404bbf;
+    border: none;
 }
-.close-btn:hover .icon-close {
+.close-btn:hover .icon-close, .close-btn:focus .icon-close
+ {
     fill: #FFFFFF;
 }
 .modal-header {
@@ -586,7 +594,7 @@ font-weight: 500;
     color: #1e1823;
     font-size: 18px;
     outline: transparent;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-icon {
     fill: #2E2F42;
@@ -597,15 +605,17 @@ font-weight: 500;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input:focus {
-    border: 1px solid #4d5ae5;
+    border-color: 1px solid #4d5ae5;
 }
 
 .modal-input:focus + .modal-icon {
   fill: #4d5ae5;
 }
 .modal-label {
+    display: block;
+    margin-bottom: 4px;
         font-size: 12px;
-        line-height: 1.16667;
+        line-height: 1.17;
         letter-spacing: 0.04em;
         color: #8e8f99;
 }
@@ -613,14 +623,19 @@ font-weight: 500;
     resize: none;
     border: 1px solid rgba(46, 47, 66, 0.4);
     outline: transparent;
+    background-color: transparent;
         border-radius: 4px;
         width: 100%;
         height: 120px;
         padding: 8px 16px;
-        transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: rgba(46, 47, 66, 0.4);
+        transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-comment:focus {
-    border: 1px solid #4d5ae5;
+    border-color: 1px solid #4d5ae5;
 }
 .modal-comment::placeholder {
     font-size: 12px;
@@ -638,8 +653,9 @@ font-weight: 500;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
         background: #4d5ae5;
         border-radius: 4px;
+        cursor: pointer;
             padding: 16px 32px;
-            width: 169px;
+            min-width: 169px;
             height: 56px;
             font-weight: 500;
                 font-size: 16px;
@@ -661,11 +677,11 @@ font-weight: 500;
 }
 
 .privacy-check {
+    display: inline-flex;
+    align-items: center;
+        justify-content: center;
     position: absolute;
         left: 0;
-    display: inline-flex;
-        align-items: center;
-        justify-content: center;
     width: 16px;
     height: 16px;
     border-radius: 2px;
@@ -684,7 +700,7 @@ font-weight: 500;
         justify-content: center;
         gap: 4px;
     font-size: 12px;
-        line-height: 1.16667;
+        line-height: 1.17;
         letter-spacing: 0.04em;
         color: #8e8f99;
 }

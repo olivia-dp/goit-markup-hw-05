@@ -459,8 +459,8 @@
         </div>
         <div class="subscribe">
           <p class="subscribe-title">Subscribe</p>
-          <div class="subscribe-forms">
-            <label for="email"></label>
+          <form class="subscribe-forms">
+            <label for="email" class="label-email"></label>
             <input
               type="email"
               class="subscribe-input"
@@ -473,7 +473,7 @@
                 <use href="./images/icons.svg#icon-Frame"></use>
               </svg>
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </footer>
@@ -532,11 +532,11 @@
           </div>
 
           <div class="modal-field modal-textarea">
-            <label for="user-text" class="modal-label">Comment</label>
+            <label for="user-comment" class="modal-label">Comment</label>
             <textarea
-              name="user-text"
+              name="user-comment"
               class="modal-comment"
-              id="user-text"
+              id="user-comment"
               placeholder="Text input"
             ></textarea>
           </div>
@@ -544,11 +544,11 @@
             <input
               type="checkbox"
               class="privacy-checkbox visually-hidden"
-              name="privacy"
-              value="agree"
-              id="privacy"
+              name="user-privacy"
+              value="true"
+              id="user-privacy"
             />
-            <label for="privacy" class="privacy-text"
+            <label for="user-privacy" class="privacy-text"
               ><span class="privacy-check"
                 ><svg width="10" height="8">
                   <use href="./images/icons.svg#icon-Vector"></use></svg></span
