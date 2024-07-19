@@ -670,15 +670,12 @@ font-weight: 500;
 .privacy-field {
     height: 16px;
     margin-bottom: 24px;
-    position: relative;
 }
 
 .privacy-check {
     display: inline-flex;
     align-items: center;
-        justify-content: center;
-    position: absolute;
-        left: 0;
+    justify-content: center;
     width: 16px;
     height: 16px;
     border-radius: 2px;
@@ -694,7 +691,6 @@ font-weight: 500;
 .privacy-text {
     display: flex;
         align-items: center;
-        justify-content: center;
         gap: 4px;
     font-size: 12px;
         line-height: 1.17;
