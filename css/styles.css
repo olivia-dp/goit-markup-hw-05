@@ -609,7 +609,6 @@ font-weight: 500;
   fill: #4d5ae5;
 }
 .modal-label {
-    display: block;
     margin-bottom: 4px;
         font-size: 12px;
         line-height: 1.17;
@@ -670,14 +669,22 @@ font-weight: 500;
 .privacy-field {
     height: 16px;
     margin-bottom: 24px;
-}
 
+}
+.privacy-text {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+}
 .privacy-check {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 16px;
     height: 16px;
+    margin-right: 8px;
     border-radius: 2px;
         border: 1px solid rgba(46, 47, 66, 0.4);
         fill: transparent;
@@ -688,17 +695,10 @@ font-weight: 500;
     fill: #F4F4FD;
     border: none;
 }
-.privacy-text {
-    display: inline-flex;
-        align-items: center;
-        gap: 4px;
-    font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.04em;
-        color: #8e8f99;
-}
-.privacy-accent {
 
+.privacy-accent {
+    display: block;
+    margin-left: 3px;
     line-height: 1.33333;
         text-decoration: underline;
         text-decoration-skip-ink: none;
